@@ -1,0 +1,29 @@
+td {
+    width: 20px;
+    height: 20px;
+}
+
+.white {
+    background-color: aliceblue;
+}
+
+.black {
+    background-color: black;
+}
+
+.purple{
+    background-color: blueviolet;
+}
+
+.bleu{
+    background-color: blue;
+}
+
+.green{
+    background-color: green;
+}
+
+table{
+    margin: auto;
+    border-collapse: collapse;
+}
