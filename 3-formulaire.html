@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulaires HTML</title>
+    </head>
+    <body>
+        <!-- je déclare mon formulaire avec la balise form -->
+        <form>
+            <!-- Deux manières de déclarer le label -->
+            <!-- pseudo -->
+            <label for="pseudo">
+                <!-- input dans label -->
+                Pseudonyme
+                <input type="text" id="pseudo" name="pseudo" placeholder="exemple" required>
+                <!-- 
+                    l'id combiné à for permet de lier le label à l'input
+                    type précise le type de donnée récupérée,
+                    name sera utilisé en php pour récupérer la donnée, 
+                    le placeholder contient le texte qui apparaît dans l'input
+                    required précise au navigateur que le champs est à renseigner obligatoirement
+                -->
+            </label>
+
+            <!-- mot de passe -->
+            <label for="mdp">
+                <!-- label au dessus de l'input -->
+                Mot de passe <span title="le mot de passe peut contenir....">*</span>
+            </label>
+            <input type="password" id="mdp" name="mdp" placeholder="Mot de passe" required>
+            
+            <!-- email -->
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Email">
+
+
+            <!-- fichier -->
+            <label for="photo">Photo</label>
+            <input type="file" id="photo" name="photo">
+
+            <!-- cases à cocher checkbox-->
+            <!-- plusieurs choix -->
+            <legende>Quelle destination choisissez-vous?</legende>
+                <input type="checkbox" id="q1" name="reponse01" value="1">
+                <label for="q1">Portugal</label>
+                <input type="checkbox" id="q2" name="reponse02" checked>
+                <label for="q2">Tunisie</label>
+                <input type="checkbox" id="q3" name="reponse03">
+                <label for="q3">Espagne</label>
+
+
+            <!-- cases à cocher radio-->
+            <!-- un choix -->
+            <legende>Qui seront vos accompagnateurs?</legende>
+            <p>
+                <label for="family">En famille</label>
+                <input type="radio" id="family" name="reponse11">
+                
+                <label for="friends">Entre amis</label>
+                <input type="radio" id="friends" name="reponse12" checked>
+
+                <!-- checked = coché par défaut -->
+                <label for="alone">En famille</label>
+                <input type="radio" id="alone" name="reponse13">Solo
+            </p><!-- un seul choix avec les bouton radio on force l'utilisateur à choisir-->
+            
+            <!-- zone de texte -->
+            <label for="commentaires">Commentaires</label>
+            <textarea name="commentaires" id="commentaires" cols="80" rows="8"></textarea>
+            <!-- rows=nombre de lignes - cols=nombre de colonnes/caractères -->
+
+            <!-- bouton envoi du formulaire -->
+            <input type="submit" name="inscription" value="Envoyer">
+
+            <!-- bouton pour vider le formulaire -->
+            <input type="reset" name="annuler" value="Annuler">
+        </form>
+    </body>
+</html>
